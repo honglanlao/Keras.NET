@@ -50,7 +50,7 @@ namespace MusicGeneration
             {
                 for (int i = 0; i < notes.Length - no_of_timesteps; i++)
                 {
-                    var input = notes.Skip(i).Take(no_of_timesteps).Select(x => Convert.ToSingle(x.NoteNumber)).ToArray();
+                    var input = notes.Skip(i).Take(no_of_timesteps).Select(e => Convert.ToSingle(e.NoteNumber)).ToArray();
                     var output = Convert.ToSingle(notes[i + no_of_timesteps].NoteNumber);
                     x.AddRange(input);
                     y.Add(output);

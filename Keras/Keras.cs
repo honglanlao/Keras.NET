@@ -22,9 +22,31 @@ namespace Keras
         private static bool alreadyDisabled = false;
 
         private static Lazy<Keras> _instance = new Lazy<Keras>(() =>
-        {
-            var instance = new Keras();
-            instance.keras = InstallAndImport(Setup.KerasModule);
+        {            
+            Setup.Run();
+
+            //if (!PythonEngine.IsInitialized)
+            //{
+            //    PythonEngine.Initialize();
+            //}
+
+            //Console.Out.WriteLine("before running turning off");
+            //string codeToRedirectOutput =
+            //    "import os\n" +
+            //    "os.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"\n" +
+            //    "os.environ['CUDA_VISIBLE_DEVICES'] = '-1'\n";
+
+            //PythonEngine.RunSimpleString(codeToRedirectOutput);
+
+            //Console.Out.WriteLine("after running turning off");
+
+
+            Setup.UseTfKeras();
+
+            var instance = new Keras
+            {
+                keras = InstallAndImport(Setup.KerasModule)
+            };
 
             try
             {

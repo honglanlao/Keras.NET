@@ -16,10 +16,16 @@ namespace BasicSamples
             //MergeExample.Run();
             //ImplementCallback.Run();
 
-            Console.WriteLine("Running XOR");
-            XOR.Run();
+            //Console.WriteLine("Running XOR");
+            //XOR.Run();
+
+            //Console.WriteLine("Running XOR");
             //MNIST_CNN.Run();
-            Console.WriteLine("Running PrimaIndiansDiabetics");
+
+            Console.WriteLine("Running ECG");
+            ECG.Run();
+
+            //Console.WriteLine("Running PrimaIndiansDiabetics");
             //PrimaIndiansDiabetics.Run();
 
             Console.ReadLine();

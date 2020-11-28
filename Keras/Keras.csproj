@@ -19,6 +19,7 @@
     <Configurations>Debug;Release;Py3.6_WIN;Py2.7_WIN;Py3.6_OSX;Py2.7_Mono;Py3.6_Mono;Py2.7_OSX</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -41,7 +42,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Numpy.Bare" Version="3.8.1.22"></PackageReference>
+    <PackageReference Include="Numpy.Bare" Version="3.6.1.25"></PackageReference>
+    <PackageReference Include="pythonnet_netstandard_py36_win" Version="2.5.1" />
   </ItemGroup>
 
 </Project>
